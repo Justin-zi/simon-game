@@ -5,3 +5,5 @@
 - Using mostly JS and some jQuery.
 
 https://justin-zi.github.io/simon-game/ PLAY HERE *****
+
+- CHEATS - Open developer console.
