@@ -45,7 +45,7 @@ const nextSequence = () => {
     $("#" + randomChosenColor).fadeOut(150).fadeIn(150);
 
     playSound(randomChosenColor);
-    facts();
+    facts(levelNumber);
 
     // document.querySelector("h1").textContent = `Level ${levelNumber}`;
 }
@@ -95,7 +95,7 @@ let startOver = () => {
     gameStart = false;
 }
 
-function facts() {
+function facts(level) {
     const funFacts = {
         '1': "Fun fact - Short-term memory only lasts 20 to 30 seconds.",
         '2': "Fun fact - The human brain’s storage capacity is virtually limitless.",
@@ -110,7 +110,7 @@ function facts() {
     const factProperties = props[Math.floor(Math.random() * props.length)];
     console.log(factProperties);
 
-    if(levelNumber >= 2) {
+    if(levelNumber % 2 == 0) {
         document.querySelector(".smaller").textContent = factProperties;
     }
 }
