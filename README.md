@@ -6,4 +6,4 @@
 
 https://justin-zi.github.io/simon-game/ PLAY HERE *****
 
-- CHEATS - Open developer console.
+- CHEATS - Open developer tools.
