@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: darkolivegreen;
 }
 
 #level-title {
@@ -8,6 +8,11 @@ body {
   font-size: 3rem;
   margin:  5%;
   color: #FEF2BF;
+}
+
+h1 {
+  margin-left: 25%;
+  margin-right: 25%;
 }
 
 .container {
