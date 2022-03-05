@@ -9,6 +9,8 @@ let levelNumber = 0;
 
 let gameStart = false;
 
+
+
 document.querySelector("body").addEventListener('keydown', () => {
 
     if(!gameStart) {
@@ -29,6 +31,7 @@ document.querySelector(".container").addEventListener('click', function(e) {
         // console.log(userClickedPattern.length)
         animatePress(userChosenColour);
         checkAnswer(userClickedPattern.length-1);
+        playSound(userChosenColour);
     }
 });
 
@@ -37,9 +40,9 @@ const nextSequence = () => {
     userClickedPattern = [];
     levelNumber++;
     document.querySelector("h1").textContent = `Level ${levelNumber}`;
+    var randomNumber = Math.floor(Math.random() * 4); 
+    var randomChosenColor = buttonColors[randomNumber];
 
-    let randomNumber = Math.floor(Math.random() * 4); 
-    let randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
     console.log(gamePattern);
     $("#" + randomChosenColor).fadeOut(150).fadeIn(150);
