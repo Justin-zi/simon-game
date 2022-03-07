@@ -95,7 +95,18 @@ h1 {
   }
 
   .smaller {
-    font-size: 20px;
+    font-size: 15px;
+    text-align: left;
+  }
+
+  .btn:hover {
+    transform: translateY(0px);
+    box-shadow: 0;
+  }
+  
+  .btn:active {
+    transform: translateY(0px);
+    box-shadow: 0;
   }
 
 }
