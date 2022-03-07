@@ -11,17 +11,33 @@ let gameStart = false;
 
 
 
-document.querySelector("body").addEventListener('keydown', () => {
 
+// const gameStartWithKey = document.querySelector("body").addEventListener('keydown', startGameEvent);
+// const gameStartWithTap = document.querySelector("body").addEventListener('touch', startGameEvent);
+
+// function startGameEvent() {
+//     if(!gameStart) {
+//         document.querySelector("h1").textContent = `Level ${levelNumber}`;
+//         nextSequence();
+//         gameStart = true;
+//     }
+// }
+// document.querySelector("body").addEventListener('keydown', () => {
+
+//     if(!gameStart) {
+//         document.querySelector("h1").textContent = `Level ${levelNumber}`;
+//         nextSequence();
+//         gameStart = true;
+//     }
+// });
+
+document.querySelector("body").addEventListener('click', function(e) {
     if(!gameStart) {
         document.querySelector("h1").textContent = `Level ${levelNumber}`;
         nextSequence();
         gameStart = true;
     }
-});
 
-document.querySelector(".container").addEventListener('click', function(e) {
-    
     let userChosenColour;
 
     if(e.target.classList.contains("btn")) {
