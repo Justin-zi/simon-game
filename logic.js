@@ -64,7 +64,14 @@ const nextSequence = () => {
     $("#" + randomChosenColor).fadeOut(150).fadeIn(150);
 
     playSound(randomChosenColor);
-    facts(levelNumber);
+
+    if(window.matchMedia("(max-width 600px)")) {
+        
+    } else {
+        facts(levelNumber);
+    }
+    
+    
 
     // document.querySelector("h1").textContent = `Level ${levelNumber}`;
 }
