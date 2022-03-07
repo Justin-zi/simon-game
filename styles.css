@@ -27,7 +27,7 @@ h1 {
   display: inline-block;
   height: 100px;
   width: 100px;
-  border: 10px solid black;
+  border: 5px solid black;
   border-radius: 20%;
 }
 
@@ -64,7 +64,7 @@ h1 {
 
 .pressed {
   box-shadow: 0 0 20px white;
-  background-color: grey;
+  background-color: white;
 }
 
 .smaller {

@@ -61,7 +61,13 @@ const nextSequence = () => {
 
     gamePattern.push(randomChosenColor);
     console.log(gamePattern);
-    $("#" + randomChosenColor).fadeOut(150).fadeIn(150);
+    // $("#" + randomChosenColor).fadeOut(150).fadeIn(150);
+
+    document.querySelector("#"+randomChosenColor).classList.add("pressed");
+    setTimeout(function() {
+        document.querySelector('#'+randomChosenColor).classList.remove("pressed");
+        // $('#' + currentColor).removeClass("pressed");
+    },180);
 
     playSound(randomChosenColor);
 
@@ -85,7 +91,8 @@ function animatePress(currentColor) {
     document.getElementById(currentColor).classList.add("pressed");
 
     setTimeout(function() {
-        $('#' + currentColor).removeClass("pressed");
+        document.querySelector('#'+currentColor).classList.remove("pressed");
+        // $('#' + currentColor).removeClass("pressed");
     },100);
 
 }
