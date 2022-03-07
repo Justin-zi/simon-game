@@ -100,13 +100,14 @@ h1 {
   }
 
   .btn:hover {
-    transform: translateY(0px);
+    transform: none;
     box-shadow: 0;
   }
   
   .btn:active {
-    transform: translateY(0px);
+    transform: none;
     box-shadow: 0;
   }
+
 
 }

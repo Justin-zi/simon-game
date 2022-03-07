@@ -92,15 +92,21 @@ function checkAnswer(currentLevel) {
         }
     }
     else {
-        wrongAnswer();
-        document.body.classList.add("game-over");
-        document.querySelector("h1").textContent = "Game over, press any key to restart";
-        setTimeout(() => {
-            document.body.classList.remove("game-over");
-        }, 300);
-        startOver();
+        if(window.matchMedia("(max-width 600px)")) {
+            wrongAnswer();
+            document.querySelector("h1").textContent = "Game over, tap any key to restart";
+            startOver();
+        }
+        else {
+            wrongAnswer();
+            document.body.classList.add("game-over");
+            document.querySelector("h1").textContent = "Game over, press any key to restart";
+            setTimeout(() => {
+                document.body.classList.remove("game-over");
+            }, 300);
+            startOver();
+        }
     }
-
 }
 
 function wrongAnswer() {
